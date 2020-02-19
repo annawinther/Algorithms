@@ -8,8 +8,8 @@ def recipe_batches(recipe, ingredients):
   # how many times 
   # lowest item in list --> hold you back can only make up to that point
 
-  # cereal for br3akfast = 2 milk & 2 cereal
-  # 4 milk & 3 milk 
+  # cereal for breakfast = 2 milk & 2 cereal
+  # 4 milk & 3 cereal 
   # max batch = 1
   # max batch is based on the lowest ingreditent
 
@@ -23,7 +23,7 @@ def recipe_batches(recipe, ingredients):
   # if there are ingredients missing, 
     # return 0
  
-  if set(recipe.keys()).issubset(set(ingredients.keys())): # coverting data structure to a set adn checking if recipe are present in subset of ingredient
+  if set(recipe.keys()).issubset(set(ingredients.keys())): # coverting data structure to a set and checking if recipe are present in subset of ingredient
       min_ratio = math.inf
       for ingredient in recipe:
         # print('i', ingredient, 'a', amount)
