@@ -14,6 +14,15 @@ def find_max_profit(prices):
   # loop: if you find price smaller than current price - set that to be smallest - else continue with that mic price
   # curr profit just calculates  --> currr profit net i in the list minus the min - price
   # if price at index we're at is lower than min price - set it to be the min price
+  
+  # max_price = max(prices[ :])
+  # min_price = min(prices[ :maxpriceindex])
+  # get index of max value
+  # max value of array, ignoring [0]
+  # min value of prices up to the index (min, slice up to index)
+  # --> 
+  # take two values away from each other
+
   current_min_price = prices[0]
   max_profit_so_far = prices[1] - prices[0]
   for i in range(len(prices) - 1):
