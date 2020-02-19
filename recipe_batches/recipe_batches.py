@@ -22,19 +22,18 @@ def recipe_batches(recipe, ingredients):
         # oterwise return the max_batches as is
   # if there are ingredients missing, 
     # return 0
-    
-  min_ratio = math.inf
-  for ingredient, amount in recipe.items():
-    print('i', ingredient, 'a', amount)
-    if ingredient not in ingredients: 
-      print('amount in mine', i)
-      return 0 
-    ratio = ingredients[ingredient] // amount
-    if ratio > min_ratio:
-      min_ratio = ratio
-      print(min_ratio)
-  return min_ratio
-
+ 
+  if set(recipe.keys()).issubset(set(ingredients.keys())): # coverting data structure to a set adn checking if recipe are present in subset of ingredient
+      min_ratio = math.inf
+      for ingredient in recipe:
+        # print('i', ingredient, 'a', amount)
+        ratio = ingredients[ingredient] // recipe[ingredient]
+        if ratio < min_ratio:
+          min_ratio = ratio
+          print(min_ratio)
+      return min_ratio
+  else: 
+    return 0 
 
 if __name__ == '__main__':
   # Change the entries of these dictionaries to test 
