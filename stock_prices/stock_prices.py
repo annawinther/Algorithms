@@ -14,7 +14,20 @@ def find_max_profit(prices):
   # loop: if you find price smaller than current price - set that to be smallest - else continue with that mic price
   # curr profit just calculates  --> currr profit net i in the list minus the min - price
   # if price at index we're at is lower than min price - set it to be the min price
-  pass
+  current_min_price = prices[0]
+  max_profit_so_far = prices[1] - prices[0]
+  for i in range(len(prices) - 1):
+    if current_min_price < prices[i]:
+      current_min_price = prices[i]
+    else: 
+      current_min_price = current_min_price
+    current_profit = prices[i + 1] - current_min_price
+    if current_profit > max_profit_so_far:
+      max_profit_so_far = current_profit
+    else:
+      max_profit_so_far = max_profit_so_far
+
+  return max_profit_so_far
 
 
 if __name__ == '__main__':
