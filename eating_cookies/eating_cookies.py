@@ -7,28 +7,20 @@ import sys
 # recursive solution
 def eating_cookies(n, cache=None):
   # if the n is less than zero
+  if n < 0:
     # return zero
+    return 0
   # otherwise if n is equal to zero
+  elif n == 0:
     # return one
+    return 1
   # otherwise 
+  else:
     # return a recursive call to the function for n - 1 + n - 2 + n - 3
-    pass
+    return eating_cookies(n - 1) + eating_cookies(n - 2) + eating_cookies(n - 3)
 
 
-print(eating_cookies(3))
-  # if we give 5:
-    # 1 1 1 1 1
-    # 1 1 1 2
-    # 1 1 2 1
-    # 1 1 3
-    # 1 2 1 1
-    # 1 2 2
-    # 2 1 1 1
-    # 2 1 2
-    # 2 2 1
-    # 2 3
-    # 3 1 1
-    # 3 2
+print(eating_cookies(5))
 
 
 if __name__ == "__main__":
