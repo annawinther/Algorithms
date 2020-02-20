@@ -5,7 +5,7 @@ import sys
 # The cache parameter is here for if you want to implement
 # a solution that is more efficient than the naive 
 # recursive solution
-def eating_cookies(n, cache=None):
+def eating_cookies_without_cache(n, cache=None):
   # if the n is less than zero
   if n < 0:
     # return zero
@@ -17,11 +17,22 @@ def eating_cookies(n, cache=None):
   # otherwise 
   else:
     # return a recursive call to the function for n - 1 + n - 2 + n - 3
-    return eating_cookies(n - 1) + eating_cookies(n - 2) + eating_cookies(n - 3)
+    return eating_cookies_without_cache(n - 1) + eating_cookies_without_cache(n - 2) + eating_cookies_without_cache(n - 3)
 
-
-print(eating_cookies(5))
-
+def eating_cookies(n, cache=None):
+  # if the n is less than zero
+    # return zero
+  # otherwise if n is equal to zero
+    # return one
+  # the case of the cache at index of n contains the answer
+    # return the cache at index of n 
+  # otherwise
+    # test if there is a cache at all (if not)
+      # create a cache using a range based loop
+    
+    # set the cache at index n to the recursive call passing th ecache as we go
+    # return the cache at index n
+    pass
 
 if __name__ == "__main__":
   if len(sys.argv) > 1:
