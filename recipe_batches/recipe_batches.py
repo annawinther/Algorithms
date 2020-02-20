@@ -26,7 +26,6 @@ def recipe_batches(recipe, ingredients):
   if set(recipe.keys()).issubset(set(ingredients.keys())): # coverting data structure to a set and checking if recipe are present in subset of ingredient
       min_ratio = math.inf
       for ingredient in recipe:
-        # print('i', ingredient, 'a', amount)
         ratio = ingredients[ingredient] // recipe[ingredient]
         if ratio < min_ratio:
           min_ratio = ratio

@@ -22,6 +22,10 @@ def find_max_profit(prices):
   # min value of prices up to the index (min, slice up to index)
   # --> 
   # take two values away from each other
+  # max_price = max(prices[ :])
+  # print(max_price)
+  # min_price = min(prices[:max_price])
+  # print(min_price)
 
   current_min_price = prices[0]
   max_profit_so_far = prices[1] - prices[0]
