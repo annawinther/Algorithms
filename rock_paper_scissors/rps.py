@@ -15,24 +15,27 @@ I'll be doing a for loop inside of a for loop becasue I want to create ALL of th
 
 import sys
 
+
 def rock_paper_scissors(n):
   # set the different moves to be a list off all different moves
+  # base cases: 
+  # if n is equal to 0 
+    # return empty list
+  # if n = 1 
+    # return the list of moves
 
-  # set the outcomes to be an empty list 
+  # # set the outcomes to be an empty list 
 
-  # define a helperfuncition that takes in the rounds remaining and the result (initialize as an empty list)
-    # have a base case is there are no more rounds left 
-      # return the outcomes and append the result from the function
-    # do a for in loop in the moves lists
-      # this is a recursive call
-      # using the helperfunction decrementing the remaining rounds for each itteration and adding the resutl together with reach move 
-      
-  # then invoking the helperfunction
+  # use recursvie function and loop over each sub array of the array
+    # inside of this loop also loop over the moves
 
-  # and return the outcomes form that
+      # for each sub array inside of the main array set the play to be the sub array plus the move 
 
-  pass 
+      # append the resutl of play to the outcome
 
+  # return the outcome
+  pass
+print(rock_paper_scissors(3))
 
 if __name__ == "__main__":
   if len(sys.argv) > 1:
